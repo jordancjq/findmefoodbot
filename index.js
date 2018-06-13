@@ -1,7 +1,12 @@
 const Telegraf = require('telegraf')
-const Extra = require('telegraf/extra')
 
-const app = new Telegraf(process.env.BOT_TOKEN)
+const BOT_TOKEN = process.env.BOT_TOKEN
+const PORT = process.env.PORT
+const URL = process.env.URL
+
+const app = new Telegraf(BOT_TOKEN)
+app.telegram.setWebhook(`${URL}/bot${BOT_TOKEN}`)
+app.startWebhook(`/bot${BOT_TOKEN}`, null, PORT)
 
 app.start((ctx) => ctx.reply("Welcome to FindMeFood!"))
 app.help((ctx) => ctx.reply("Commands available: /fmf"))
