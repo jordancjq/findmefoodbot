@@ -13,6 +13,7 @@ app.command('nearby', (ctx) => ctx.reply('Finding...'))
 
 app.on('text', (ctx) => {
     const userMessage = ctx.message.text
+    console.log(userMessage)
     return ctx.reply(`${ctx.message.from.username}: ${userMessage}`)
 })
 
