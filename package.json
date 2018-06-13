@@ -4,11 +4,12 @@
   "description": "a simple bot",
   "main": "index.js",
   "dependencies": {
+    "dotenv": "^6.0.0",
     "telegraf": "^3.21.2"
   },
   "devDependencies": {},
   "engines": {
-      "node": "10.1.0"
+    "node": "10.1.0"
   },
   "scripts": {
     "start": "node index.js",
