@@ -7,7 +7,7 @@ const URL = process.env.URL
 const app = new Telegraf(BOT_TOKEN)
 
 app.start((ctx) => ctx.reply("Welcome to FindMeFood!"))
-app.help((ctx) => ctx.reply("Commands available: just type / to find out more.\nFindMeBot will respond to you."))
+app.help((ctx) => ctx.reply("Commands available: just type '/' to find out more.\nFindMeFood Bot will respond to you."))
 
 app.command('fmf', (ctx) => ctx.reply('Randomizing...'))
 app.command('top', (ctx) => ctx.reply('Listing...'))
