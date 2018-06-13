@@ -1,6 +1,8 @@
 const Telegraf = require('telegraf')
 
-const app = new Telegraf(process.env.BOT_TOKEN)
+const BOT_TOKEN = process.env.BOT_TOKEN
+
+const app = new Telegraf(BOT_TOKEN)
 
 app.start((ctx) => ctx.reply("Welcome to FindMeFood!"))
 app.help((ctx) => ctx.reply("Commands available: /fmf"))
