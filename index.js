@@ -1,6 +1,8 @@
 const Telegraf = require('telegraf')
 
 const BOT_TOKEN = process.env.BOT_TOKEN
+const PORT = process.env.PORT
+const URL = process.env.URL
 
 const app = new Telegraf(BOT_TOKEN)
 
@@ -17,4 +19,5 @@ app.on('text', (ctx) => {
     return ctx.reply(`${ctx.message.from.username}: ${userMessage}`)
 })
 
-app.startPolling()
+app.telegram.setWebhook(`${URL}/bot${BOT_TOKEN}`)
+app.startWebhook(`/bot${BOT_TOKEN}`, null, PORT)
