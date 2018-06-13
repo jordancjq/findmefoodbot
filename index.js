@@ -7,11 +7,12 @@ const URL = process.env.URL
 const app = new Telegraf(BOT_TOKEN)
 
 app.start((ctx) => ctx.reply("Welcome to FindMeFood!"))
-app.help((ctx) => ctx.reply("Commands available: /fmf"))
+app.help((ctx) => ctx.reply("Commands available: just type / to find out more.\n FindMeBot will respond to you."))
 
 app.command('fmf', (ctx) => ctx.reply('Randomizing...'))
 app.command('top', (ctx) => ctx.reply('Listing...'))
-app.command('nearby', (ctx) => ctx.reply('Finding...'))
+app.command('hot', (ctx) => ctx.reply('Finding...'))
+app.command('nearby', (ctx) => ctx.reply("Locating..."))
 
 app.on('text', (ctx) => {
     const userMessage = ctx.message.text
@@ -20,4 +21,4 @@ app.on('text', (ctx) => {
 })
 
 app.telegram.setWebhook(`${URL}/bot${BOT_TOKEN}`)
-app.startWebhook(`/bot${BOT_TOKEN}`, null, PORT)
+app.startWebhook(`/bot${BOT_TOKEN}`, null, PORT)g
