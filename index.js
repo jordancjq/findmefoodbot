@@ -1,6 +1,5 @@
 const Telegraf = require('telegraf')
 const Extra = require('telegraf/extra')
-const Session = require('telegraf/session')
 
 const app = new Telegraf(process.env.BOT_TOKEN)
 
