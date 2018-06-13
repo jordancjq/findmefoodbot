@@ -21,4 +21,4 @@ app.on('text', (ctx) => {
 })
 
 app.telegram.setWebhook(`${URL}/bot${BOT_TOKEN}`)
-app.startWebhook(`/bot${BOT_TOKEN}`, null, PORT)g
+app.startWebhook(`/bot${BOT_TOKEN}`, null, PORT)
